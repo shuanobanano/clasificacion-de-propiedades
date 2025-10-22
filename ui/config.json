@@ -1,0 +1,18 @@
+{
+  "app": {
+    "indexHtml": "renderer/index.html",
+    "preloadJs": "preload.js",
+    "openDevTools": true,
+    "fileFilters": [
+      { "name": "Datos de propiedades", "extensions": ["json", "jsonl", "csv", "joblib", "pkl", "md", "markdown"] }
+    ]
+  },
+  "python": {
+    "executable": "python",
+    "argsTemplate": ["-m", "src.predict", "--input", "${file}", "--jsonl", "--band_pct", "0.10"],
+    "workingDir": "../"
+  },
+  "spawn": {
+    "output": "jsonl"
+  }
+}

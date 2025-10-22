@@ -1,0 +1,96 @@
+feature,importance
+"feature_0_Puerto Madero, Capital Federal",0.6566928931660097
+"feature_0_Palermo Chico, Palermo",0.0574875841564555
+"feature_0_Recoleta, Capital Federal",0.034045527134012064
+"feature_0_Belgrano, Capital Federal",0.03216704695965468
+"feature_0_Palermo Nuevo, Palermo",0.023221633864213692
+"feature_0_Retiro, Capital Federal",0.02260250349175524
+"feature_0_Barrio Parque, Palermo",0.02022810208316509
+"feature_0_Palermo, Capital Federal",0.011289415128795829
+"feature_0_Caballito, Capital Federal",0.01113024002541029
+"feature_0_Villa Urquiza, Capital Federal",0.009065576382114943
+"feature_0_Almagro, Capital Federal",0.008864029355565224
+"feature_0_Balvanera, Capital Federal",0.008067713644612208
+"feature_0_Las Cañitas, Palermo",0.007127712999345839
+"feature_0_Palermo Hollywood, Palermo",0.006479410928894646
+"feature_0_Villa Crespo, Capital Federal",0.006297892624489542
+"feature_0_Flores, Capital Federal",0.0060321176915699645
+"feature_0_Palermo Soho, Palermo",0.005104017557450633
+"feature_0_Belgrano C, Belgrano",0.005037488566622945
+"feature_0_Barrio Norte, Capital Federal",0.004516935648998667
+"feature_0_San Cristobal, Capital Federal",0.004459209523272573
+"feature_0_Núñez, Capital Federal",0.0044284144832184525
+"feature_0_Centro / Microcentro, Capital Federal",0.004374934910589469
+"feature_0_Villa del Parque, Capital Federal",0.004135352170703239
+"feature_0_Botánico, Palermo",0.0038259961829256246
+"feature_0_San Nicolás, Capital Federal",0.003624671430676802
+"feature_0_Belgrano Chico, Belgrano",0.0031760736941807304
+"feature_0_Congreso, Capital Federal",0.003091508491856414
+"feature_0_Boedo, Capital Federal",0.00265957358338738
+"feature_0_Floresta, Capital Federal",0.0017582851358991863
+"feature_0_San Telmo, Capital Federal",0.0016965411718656987
+"feature_0_Distrito Quartier, Retiro",0.0016832868740290709
+"feature_0_Villa Pueyrredón, Capital Federal",0.001635411587304418
+"feature_0_Monserrat, Capital Federal",0.0016210760941850271
+"feature_0_La Paternal, Capital Federal",0.0015944642802876775
+"feature_0_Puerto Retiro, Retiro",0.0014346906200711814
+"feature_0_Colegiales, Capital Federal",0.0013997385656878572
+"feature_0_Flores Norte, Flores",0.0012818122181245007
+"feature_0_Chacarita, Capital Federal",0.0011432790264396145
+"feature_0_Tribunales, Capital Federal",0.0010432915272609216
+"feature_0_Villa Luro, Capital Federal",0.001025204181481555
+"feature_0_Abasto, Capital Federal",0.0009782981134215493
+"feature_0_Constitución, Capital Federal",0.0009412208468556086
+"feature_0_Almagro Norte, Almagro",0.0009158872858673192
+"feature_0_Saavedra, Capital Federal",0.0007155248552563143
+"feature_0_Villa Devoto, Capital Federal",0.0006961936305759615
+"feature_0_Villa Santa Rita, Capital Federal",0.0006431748005095991
+"feature_0_Parque Patricios, Capital Federal",0.0005565662578644008
+"feature_0_Caballito Norte, Caballito",0.0005530339703628289
+"feature_0_Parque Chas, Capital Federal",0.0005052294616666699
+"feature_0_Belgrano R, Belgrano",0.0005002584112022807
+"feature_0_Once, Capital Federal",0.000490227371886433
+"feature_0_Barracas, Capital Federal",0.00046617712887205953
+"feature_0_Monte Castro, Capital Federal",0.0004655604365559624
+"feature_0_La Boca, Capital Federal",0.00041284561541757943
+"feature_0_Villa Ortuzar, Capital Federal",0.00036208019823532353
+"feature_0_Liniers, Capital Federal",0.00036038863549069355
+"feature_0_Parque Chacabuco, Capital Federal",0.0003537684075526169
+"feature_0_Coghlan, Capital Federal",0.00035003508917094163
+"feature_0_Palermo Viejo, Palermo",0.0003310963144818231
+"feature_0_Barrio Parque General Belgrano, Belgrano",0.00029465637115085464
+"feature_0_Lomas de Núñez, Núñez",0.0002702564183399729
+"feature_0_Caballito Sur, Caballito",0.00023838067084730916
+"feature_0_Villa Lugano, Capital Federal",0.00023026343842000657
+"feature_0_Floresta Norte, Floresta",0.0002115135595673215
+"feature_0_Pompeya, Capital Federal",0.0001762901600346864
+"feature_0_Almagro Sur, Almagro",0.00016808311327033815
+"feature_0_Parque Centenario, Capital Federal",0.0001631078072135194
+"feature_0_Velez Sarsfield, Capital Federal",0.00012730544106751904
+"feature_0_Barrio Chino, Belgrano",0.00012057611670308318
+"feature_0_Villa General Mitre, Capital Federal",0.00011830091661513143
+"feature_0_Mataderos, Capital Federal",0.00011306502711165219
+"feature_0_Parque Rivadavia, Caballito",0.00011115105622209432
+"feature_0_Flores Sur, Flores",8.249706977518084e-05
+"feature_0_Primera Junta, Caballito",7.974053345311047e-05
+"feature_0_Belgrano C, Colegiales",7.31258280234086e-05
+"feature_0_Agronomía, Capital Federal",6.881403404826157e-05
+"feature_0_Parque Avellaneda, Capital Federal",5.76042408080078e-05
+"feature_0_Floresta Sur, Floresta",3.756974649590636e-05
+"feature_0_Cid Campeador, Caballito",3.467424299619834e-05
+"feature_0_Villa Real, Capital Federal",3.059852445196335e-05
+"feature_0_Otro, Capital Federal",1.83379026684943e-05
+"feature_0_Versalles, Capital Federal",1.3229585880128495e-05
+"feature_0_Catalinas, Capital Federal",1.0235049992200166e-05
+"feature_0_Naón, Mataderos",1.4044061943275003e-06
+"feature_0_Villa Soldati, Capital Federal",9.947448193140803e-07
+Expensas,0.0
+rooms,0.0
+"feature_0_Botánico, Recoleta",0.0
+garage,0.0
+surface_total,0.0
+bedrooms,0.0
+"feature_0_Los Perales, Mataderos",0.0
+"feature_0_Temperley, San Telmo",0.0
+feature_1_departamentos,0.0
+feature_2_alquiler,0.0

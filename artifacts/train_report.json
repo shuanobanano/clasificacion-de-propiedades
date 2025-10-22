@@ -1,0 +1,15 @@
+{
+  "metrics": {
+    "r2_cv": 0.25930671979137665,
+    "mae_cv": 505477.1598704911,
+    "rmse_cv": 930632.4355609668
+  },
+  "median_price": 585000.0,
+  "band_pct": 0.1,
+  "cv_folds": 5,
+  "random_state": 42,
+  "data_path": "data\\raw\\dataset_alquileres.csv",
+  "data_hash": "628925f4730b96dc41dda8d8386211e7155a375e784326e9db856cd6db38c4ae",
+  "n_samples": 44342,
+  "n_features": 8
+}
