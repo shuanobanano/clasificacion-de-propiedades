@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import warnings
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
@@ -142,42 +143,62 @@ def run_inference(args: argparse.Namespace) -> List[Dict[str, Any]]:
         config.band_pct = args.band_pct
 
     pipeline = load_pipeline(artifacts_dir)
+    preprocessor = pipeline.named_steps.get("preprocessor")
 
     df = load_dataset(Path(args.input))
     records_df = df[REQUIRED_COLUMNS]
 
     features, _ = split_features_target(records_df)
-    predictions = pipeline.predict(features)
+    frame = features.copy()
+
+    expected_cols = None
+    if preprocessor is not None:
+        if hasattr(preprocessor, "feature_names_in_"):
+            expected_cols = list(preprocessor.feature_names_in_)
+        elif hasattr(preprocessor, "named_transformers_"):
+            expected_cols = list(getattr(preprocessor, "feature_names_in_", []))
+
+    if expected_cols:
+        missing = [col for col in expected_cols if col not in frame.columns]
+        for col in missing:
+            frame[col] = pd.NA
+        frame = frame[expected_cols]
+
+    X = frame
+    predictions = pipeline.predict(X)
 
     return build_prediction_records(records_df, predictions, config.band_pct)
 
 
 def main() -> None:
+    warnings.filterwarnings(
+        "ignore",
+        message="X does not have valid feature names, but .* was fitted with feature names",
+        category=UserWarning,
+    )
     args = parse_args()
     records = run_inference(args)
 
-    if args.jsonl:
-        if args.output:
-            output_path = Path(args.output)
-            output_dir = output_path.parent
-            if os.fspath(output_dir):
-                output_dir.mkdir(parents=True, exist_ok=True)
-            with output_path.open("w", encoding="utf-8") as f:
+    out_path = Path(args.output) if args.output else None
+    if out_path and os.fspath(out_path.parent):
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    output_is_jsonl = args.jsonl or (out_path and out_path.suffix.lower() == ".jsonl")
+
+    if output_is_jsonl:
+        if out_path:
+            with out_path.open("w", encoding="utf-8") as f:
                 for record in records:
                     f.write(json.dumps(record, ensure_ascii=False) + "\n")
         else:
             for record in records:
                 print(json.dumps(record, ensure_ascii=False))
     else:
-        frame = predictions_to_frame(records)
-        if args.output:
-            output_path = Path(args.output)
-            output_dir = output_path.parent
-            if os.fspath(output_dir):
-                output_dir.mkdir(parents=True, exist_ok=True)
-            frame.to_csv(output_path, index=False)
+        frame_out = predictions_to_frame(records)
+        if out_path:
+            frame_out.to_csv(out_path, index=False)
         else:
-            print(frame.to_csv(index=False))
+            print(frame_out.to_csv(index=False))
 
 
 if __name__ == "__main__":
